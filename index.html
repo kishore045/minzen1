@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="navbar">
+  <div class="nav-logo">EV CARE</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<body>
+  <div class="analog-clock">
+    <div class="hand hour" id="hour-hand"></div>
+    <div class="hand minute" id="minute-hand"></div>
+    <div class="hand second" id="second-hand"></div>
+    <div class="center-dot"></div>
+  </div>
+
+ 
+
+
+  <div class="banner">
+    <div class="title">
+    </div>
+      <svg width="360" height="360" viewBox="0 0 24 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2.33984 8.20813C1.77984 8.20813 1.41984 8.02013 1.25984 7.64413C1.21984 7.65213 1.17984 7.65613 1.13984 7.65613H1.00784C0.33584 7.65613 -0.000160135 7.47213 -0.000160135 7.10413C-0.000160135 6.95213 0.0558399 6.87613 0.16784 6.87613C0.20784 6.87613 0.22784 6.89213 0.22784 6.92413L0.20384 6.98413C0.17984 7.01613 0.16784 7.04813 0.16784 7.08013C0.16784 7.24813 0.29984 7.36813 0.56384 7.44013C0.75584 7.49613 0.97184 7.51213 1.21184 7.48813C1.20384 7.46413 1.19984 7.42013 1.19984 7.35613C1.19984 7.04413 1.35584 6.70812 1.66784 6.34812C2.08384 5.86812 2.71984 5.53212 3.57584 5.34012C3.67184 5.16412 3.76784 4.96012 3.86384 4.72812C3.95984 4.51212 4.05584 4.29612 4.15184 4.08012C4.24784 3.86412 4.33984 3.64812 4.42784 3.43212C4.70784 2.81612 4.96784 2.32012 5.20784 1.94412C4.99184 1.24812 4.63184 0.752125 4.12784 0.456125C4.08784 0.448125 4.04784 0.444125 4.00784 0.444125H3.87584C3.32384 0.444125 2.75584 0.660125 2.17184 1.09212C1.59584 1.51612 1.17984 2.03212 0.92384 2.64012C0.88384 2.74412 0.84384 2.84812 0.80384 2.95212C0.77184 3.04812 0.74784 3.14812 0.73184 3.25212C0.85984 3.50012 1.01984 3.68012 1.21184 3.79212C1.40384 3.90412 1.62384 3.96012 1.87184 3.96012C2.18384 3.96012 2.47184 3.86412 2.73584 3.67212C3.02384 3.47212 3.18784 3.23212 3.22784 2.95212C3.22784 2.92012 3.24384 2.90412 3.27584 2.90412C3.30784 2.91212 3.32384 2.93212 3.32384 2.96412C3.29184 3.25212 3.11584 3.51212 2.79584 3.74413C2.49984 3.95212 2.17984 4.05612 1.83584 4.05612C1.60384 4.05612 1.39184 4.01212 1.19984 3.92412C1.00784 3.83612 0.84384 3.69612 0.70784 3.50412C0.69984 3.54412 0.69584 3.58412 0.69584 3.62412C0.69584 3.66412 0.69584 3.70412 0.69584 3.74413C0.69584 4.05612 0.76384 4.31612 0.89984 4.52412C1.10784 4.82812 1.43984 4.98012 1.89584 4.98012C2.23984 4.98012 2.57984 4.86012 2.91584 4.62012C3.13984 4.46012 3.31584 4.29212 3.44384 4.11612C3.47584 4.06012 3.49984 4.04812 3.51584 4.08012V4.09212C3.51584 4.10012 3.51184 4.11612 3.50384 4.14012C3.50384 4.15612 3.49984 4.17612 3.49184 4.20012C3.38784 4.42412 3.16784 4.64812 2.83184 4.87212C2.43184 5.12812 2.04384 5.25612 1.66784 5.25612C1.20384 5.25612 0.85184 5.10812 0.61184 4.81212C0.40384 4.54012 0.29984 4.19612 0.29984 3.78012C0.29984 3.51612 0.34384 3.24012 0.43184 2.95212C0.37584 2.78412 0.34784 2.59212 0.34784 2.37612C0.34784 1.52012 0.74784 0.852125 1.54784 0.372124C1.94784 0.124125 2.38784 0.000124931 2.86784 0.000124931C3.23584 0.000124931 3.59184 0.0801249 3.93584 0.240125L3.99584 0.276125C4.03584 0.268125 4.07984 0.264124 4.12784 0.264124H4.24784C5.06384 0.264124 5.66384 0.508124 6.04784 0.996125C6.15184 0.924125 6.26384 0.876125 6.38384 0.852125C6.43184 0.844125 6.45584 0.860125 6.45584 0.900125C6.45584 0.956125 6.41984 0.988125 6.34784 0.996125C6.26784 1.01212 6.19184 1.04812 6.11984 1.10412C6.38384 1.50412 6.51584 2.03612 6.51584 2.70012C6.51584 3.44412 6.35184 4.32012 6.02384 5.32812L6.39584 5.42412L6.55184 5.14812C7.35184 3.82012 7.96384 2.88412 8.38784 2.34012C9.37984 1.06812 10.2358 0.432124 10.9558 0.432124C11.1478 0.432124 11.2998 0.504124 11.4118 0.648124C11.5318 0.784125 11.5918 0.952125 11.5918 1.15212C11.5918 1.28812 11.5758 1.35612 11.5438 1.35612C11.5038 1.35612 11.4838 1.32812 11.4838 1.27212C11.4838 0.920125 11.2998 0.744125 10.9318 0.744125C10.7718 0.744125 10.6158 0.780125 10.4638 0.852125C9.86384 1.12412 9.14784 1.80812 8.31584 2.90412C8.13184 3.15212 7.89184 3.49212 7.59584 3.92412C7.30784 4.34812 6.96384 4.87212 6.56384 5.49612C7.25184 5.77612 7.59584 6.18012 7.59584 6.70812C7.59584 6.86813 7.56784 7.02013 7.51184 7.16413C7.51184 7.18813 7.49984 7.20013 7.47584 7.20013C7.41984 7.20013 7.39984 7.17613 7.41584 7.12813C7.47184 6.98413 7.49984 6.84012 7.49984 6.69612C7.49984 6.19212 7.17184 5.81612 6.51584 5.56812L6.49184 5.60412C5.88384 6.54812 5.47984 7.02013 5.27984 7.02013C5.22384 7.02013 5.20784 6.99613 5.23184 6.94813C5.43184 6.46812 5.59984 5.94412 5.73584 5.37612L5.37584 5.32812C5.01584 6.60813 4.29984 7.50013 3.22784 8.00413C2.93184 8.14013 2.63584 8.20813 2.33984 8.20813ZM0.55184 2.62812C0.81584 2.04412 1.25984 1.52812 1.88384 1.08012C2.50784 0.632125 3.14784 0.368125 3.80384 0.288125C3.51584 0.160125 3.20384 0.0961244 2.86784 0.0961244C2.41184 0.0961244 1.98784 0.216125 1.59584 0.456125C0.89184 0.872125 0.53984 1.50412 0.53984 2.35212V2.49612C0.53984 2.54412 0.54384 2.58812 0.55184 2.62812ZM5.33984 1.74012C5.45984 1.57212 5.55984 1.44012 5.63984 1.34412C5.36784 0.880125 4.93984 0.592124 4.35584 0.480124C4.79584 0.776125 5.12384 1.19612 5.33984 1.74012ZM5.75984 5.26812C5.95184 4.49212 6.04784 3.78412 6.04784 3.14412C6.04784 2.48812 5.94784 1.95612 5.74784 1.54812C5.65984 1.69212 5.56384 1.87212 5.45984 2.08812C5.57184 2.49612 5.62784 2.94012 5.62784 3.42012C5.62784 4.05212 5.55184 4.65612 5.39984 5.23212L5.75984 5.26812ZM8.99984 7.44013C8.43984 7.44013 8.15984 7.04813 8.15984 6.26412C8.15984 5.50412 8.32784 4.60412 8.66384 3.56412C9.10384 2.22012 9.64384 1.57212 10.2838 1.62012C10.3318 1.62012 10.3558 1.64412 10.3558 1.69212C10.3398 1.74012 10.2998 1.76412 10.2358 1.76412C9.79584 1.76412 9.40384 2.44012 9.05984 3.79212C8.79584 4.83212 8.66384 5.62812 8.66384 6.18012C8.66384 6.88413 8.84384 7.23613 9.20384 7.23613C9.51584 7.23613 9.81984 6.99213 10.1158 6.50412C10.1478 6.45612 10.1798 6.43213 10.2118 6.43213C10.2358 6.43213 10.2478 6.44412 10.2478 6.46812C10.2478 6.50812 10.2398 6.54012 10.2238 6.56412C10.0878 6.82812 9.90384 7.04013 9.67184 7.20013C9.44784 7.36013 9.22384 7.44013 8.99984 7.44013ZM4.18784 5.24413C4.42784 5.22012 4.66784 5.20812 4.90784 5.20812C4.96384 5.20812 5.01984 5.20812 5.07584 5.20812C5.13984 5.20812 5.19984 5.21212 5.25584 5.22012C5.37584 4.73212 5.43584 4.18412 5.43584 3.57612C5.43584 3.13612 5.39584 2.74012 5.31584 2.38812C5.20384 2.69212 5.06784 3.05212 4.90784 3.46812L4.34384 4.88412C4.29584 5.01212 4.24384 5.13212 4.18784 5.24413ZM2.33984 8.12413C2.59584 8.12413 2.87984 8.05613 3.19184 7.92013C4.20784 7.44013 4.88384 6.57613 5.21984 5.32812C5.03584 5.32012 4.85184 5.32012 4.66784 5.32812C4.48384 5.33612 4.29984 5.35612 4.11584 5.38812C3.41984 6.72412 2.53184 7.46813 1.45184 7.62012C1.57184 7.95613 1.86784 8.12413 2.33984 8.12413ZM5.39984 6.86413C5.58384 6.77612 5.89984 6.32412 6.34784 5.50812L5.99984 5.41212C5.91184 5.68412 5.81584 5.94012 5.71184 6.18012C5.61584 6.42012 5.51184 6.64812 5.39984 6.86413ZM1.40384 7.46413C2.17984 7.31213 2.87584 6.66012 3.49184 5.50812C2.75584 5.70012 2.21184 5.99612 1.85984 6.39612C1.51584 6.78012 1.36384 7.13613 1.40384 7.46413ZM10.9919 3.64812C10.9279 3.64812 10.8599 3.63612 10.7879 3.61212C10.7239 3.58012 10.6919 3.55212 10.6919 3.52812C10.6919 3.51212 10.6959 3.50012 10.7039 3.49212C10.9839 3.26012 11.2159 3.14412 11.3999 3.14412C11.4479 3.14412 11.4719 3.16012 11.4719 3.19212C11.4719 3.24012 11.4199 3.32012 11.3159 3.43212C11.2119 3.54412 11.1279 3.61212 11.0639 3.63612C11.0559 3.63612 11.0439 3.64012 11.0279 3.64812C11.0199 3.64812 11.0079 3.64812 10.9919 3.64812ZM10.4279 6.81612C10.1719 6.81612 10.0439 6.59212 10.0439 6.14412V6.00012C10.0439 5.95212 10.0479 5.90012 10.0559 5.84412C10.0719 5.74012 10.0959 5.61212 10.1279 5.46012C10.1599 5.30812 10.2039 5.12812 10.2599 4.92012L10.4519 4.23612C10.4599 4.18012 10.5399 4.15212 10.6919 4.15212C10.8759 4.15212 10.9679 4.19612 10.9679 4.28412C10.9679 4.38812 10.9399 4.50012 10.8839 4.62012C10.8199 4.78812 10.7479 4.87612 10.6679 4.88412C10.6279 4.90012 10.5679 5.24412 10.4879 5.91612C10.4719 6.02812 10.4639 6.11612 10.4639 6.18012C10.4639 6.42812 10.5279 6.55212 10.6559 6.55212C10.7519 6.55212 10.8799 6.48412 11.0399 6.34812L11.7719 5.73612C11.8039 5.71212 11.8279 5.70812 11.8439 5.72412C11.8679 5.73212 11.8719 5.75612 11.8559 5.79612C11.7199 6.00412 11.4679 6.24412 11.0999 6.51612C10.8279 6.71612 10.6039 6.81612 10.4279 6.81612ZM13.9152 7.14013C13.4992 7.14013 13.2912 6.87212 13.2912 6.33612C13.2912 6.04812 13.3512 5.68812 13.4712 5.25612L13.6632 4.57212L12.8232 5.53212C12.6232 5.76412 12.4672 5.95612 12.3552 6.10812C12.2432 6.26012 12.1752 6.36812 12.1512 6.43213C12.0552 6.68813 11.9072 6.81612 11.7072 6.81612C11.6352 6.81612 11.6112 6.78012 11.6352 6.70812L11.8272 5.96412C11.8912 5.73212 11.9352 5.52012 11.9592 5.32812C11.9832 5.12812 11.9952 4.95212 11.9952 4.80012C11.9952 4.73612 11.9912 4.68012 11.9832 4.63212C11.9752 4.58412 11.9712 4.53612 11.9712 4.48812C11.9712 4.38412 12.0232 4.28812 12.1272 4.20012C12.2312 4.11212 12.3352 4.06812 12.4392 4.06812C12.5592 4.06812 12.6072 4.13612 12.5832 4.27212C12.5592 4.40812 12.5312 4.54812 12.4992 4.69212C12.4752 4.82812 12.4512 4.96412 12.4272 5.10012L12.2352 5.97612C12.7152 5.53612 13.2232 4.89612 13.7592 4.05612C13.7912 4.00012 13.8672 3.97212 13.9872 3.97212C14.1792 3.97212 14.2792 4.01212 14.2872 4.09212C14.3032 4.16412 14.2712 4.30812 14.1912 4.52412C14.0712 4.87612 13.9872 5.15212 13.9392 5.35212C13.8192 5.85612 13.7592 6.25612 13.7592 6.55212C13.7592 6.84012 13.8232 6.98413 13.9512 6.98413C14.0952 6.98413 14.2592 6.90413 14.4432 6.74412C14.6112 6.60012 14.6912 6.52812 14.6832 6.52812C14.7072 6.52812 14.7112 6.56012 14.6952 6.62412C14.6872 6.68812 14.6472 6.75612 14.5752 6.82812C14.3672 7.03613 14.1472 7.14013 13.9152 7.14013ZM16.7823 7.27213C16.7503 7.27213 16.7343 7.26013 16.7343 7.23613C16.7343 7.20413 16.7703 7.14813 16.8423 7.06813C16.9223 6.98813 16.9623 6.92813 16.9623 6.88813C16.9463 6.80013 16.7663 6.75612 16.4223 6.75612C16.0143 6.75612 15.6823 6.76412 15.4263 6.78012C15.1543 6.80412 14.9783 6.82012 14.8983 6.82812C14.8263 6.84413 14.7703 6.85213 14.7303 6.85213H14.6463C14.6063 6.82012 14.5783 6.77212 14.5623 6.70812V6.67212C14.5623 6.64012 14.5703 6.60812 14.5863 6.57612C14.6743 6.40012 15.0223 6.00812 15.6303 5.40012L16.8423 4.18812C16.5383 4.16412 16.3463 4.15212 16.2663 4.15212C16.0743 4.15212 15.9063 4.17612 15.7623 4.22412C15.6263 4.27212 15.5103 4.33612 15.4143 4.41612L15.0783 4.69212C15.0543 4.69212 15.0423 4.67212 15.0423 4.63212C15.1463 4.36812 15.2823 4.16412 15.4503 4.02012C15.5383 4.00412 15.6343 3.98812 15.7383 3.97212C15.8423 3.95612 15.9503 3.94812 16.0623 3.94812H16.3503C16.3983 3.94812 16.4543 3.95212 16.5183 3.96012C16.5823 3.96012 16.6463 3.96012 16.7103 3.96012L17.1063 3.97212H17.3343C17.4863 3.97212 17.5503 4.01612 17.5263 4.10412C17.4863 4.23212 17.4063 4.35212 17.2863 4.46412C17.1663 4.57612 17.0503 4.64012 16.9383 4.65612C15.8983 5.52812 15.2703 6.16812 15.0543 6.57612C15.4623 6.52012 15.8063 6.48012 16.0863 6.45612C16.3663 6.43212 16.5863 6.42012 16.7463 6.42012C17.0743 6.42012 17.2383 6.50412 17.2383 6.67212C17.2383 6.79212 17.1743 6.92013 17.0463 7.05613C16.9263 7.20013 16.8383 7.27213 16.7823 7.27213ZM18.1002 6.97213C17.8602 6.97213 17.6602 6.90013 17.5002 6.75612C17.3402 6.60412 17.2602 6.34812 17.2602 5.98812C17.2602 5.89212 17.2682 5.78812 17.2842 5.67612C17.3562 5.26812 17.5242 4.88012 17.7882 4.51212C18.1162 4.06412 18.4562 3.84012 18.8082 3.84012C18.9922 3.84012 19.1642 3.89212 19.3242 3.99612C19.4842 4.09212 19.5642 4.23612 19.5642 4.42812C19.5642 4.64412 19.4762 4.86812 19.3002 5.10012H19.5402C19.5802 5.10012 19.6042 5.10412 19.6122 5.11212C19.6122 5.16012 19.4642 5.21212 19.1682 5.26812C18.9922 5.46812 18.8602 5.56812 18.7722 5.56812C18.7562 5.56812 18.7482 5.56012 18.7482 5.54412C18.7482 5.55212 18.8082 5.47212 18.9282 5.30412C18.8242 5.30412 18.6842 5.31212 18.5082 5.32812C18.3402 5.33612 18.1362 5.35612 17.8962 5.38812C17.8082 5.62812 17.7642 5.85212 17.7642 6.06012C17.7642 6.32412 17.8362 6.51612 17.9802 6.63612C18.0682 6.71612 18.1762 6.75612 18.3042 6.75612C18.3282 6.75612 18.3522 6.75612 18.3762 6.75612C18.4002 6.75612 18.4242 6.75212 18.4482 6.74412C18.9602 6.65612 19.4562 6.36012 19.9362 5.85612C19.9762 5.80012 20.0082 5.79212 20.0322 5.83212C20.0402 5.84012 20.0442 5.85212 20.0442 5.86812C20.0442 5.90012 20.0202 5.94012 19.9722 5.98812C19.8042 6.20412 19.5402 6.41612 19.1802 6.62412C18.7802 6.85612 18.4202 6.97213 18.1002 6.97213ZM18.0162 5.13612C18.1282 5.12812 18.2722 5.12412 18.4482 5.12412L19.0482 5.11212C19.1362 4.93612 19.1922 4.79612 19.2162 4.69212C19.2402 4.58812 19.2522 4.50412 19.2522 4.44012C19.2522 4.27212 19.1882 4.18812 19.0602 4.18812C18.9002 4.18812 18.7242 4.28412 18.5322 4.47612C18.4202 4.58812 18.3202 4.70012 18.2322 4.81212C18.1442 4.91612 18.0722 5.02412 18.0162 5.13612ZM22.2355 7.14013C21.8195 7.14013 21.6115 6.87212 21.6115 6.33612C21.6115 6.04812 21.6715 5.68812 21.7915 5.25612L21.9835 4.57212L21.1435 5.53212C20.9435 5.76412 20.7875 5.95612 20.6755 6.10812C20.5635 6.26012 20.4955 6.36812 20.4715 6.43213C20.3755 6.68813 20.2275 6.81612 20.0275 6.81612C19.9555 6.81612 19.9315 6.78012 19.9555 6.70812L20.1475 5.96412C20.2115 5.73212 20.2555 5.52012 20.2795 5.32812C20.3035 5.12812 20.3155 4.95212 20.3155 4.80012C20.3155 4.73612 20.3115 4.68012 20.3035 4.63212C20.2955 4.58412 20.2915 4.53612 20.2915 4.48812C20.2915 4.38412 20.3435 4.28812 20.4475 4.20012C20.5515 4.11212 20.6555 4.06812 20.7595 4.06812C20.8795 4.06812 20.9275 4.13612 20.9035 4.27212C20.8795 4.40812 20.8515 4.54812 20.8195 4.69212C20.7955 4.82812 20.7715 4.96412 20.7475 5.10012L20.5555 5.97612C21.0355 5.53612 21.5435 4.89612 22.0795 4.05612C22.1115 4.00012 22.1875 3.97212 22.3075 3.97212C22.4995 3.97212 22.5995 4.01212 22.6075 4.09212C22.6235 4.16412 22.5915 4.30812 22.5115 4.52412C22.3915 4.87612 22.3075 5.15212 22.2595 5.35212C22.1395 5.85612 22.0795 6.25612 22.0795 6.55212C22.0795 6.84012 22.1435 6.98413 22.2715 6.98413C22.4155 6.98413 22.5795 6.90413 22.7635 6.74412C22.9315 6.60012 23.0115 6.52812 23.0035 6.52812C23.0275 6.52812 23.0315 6.56012 23.0155 6.62412C23.0075 6.68812 22.9675 6.75612 22.8955 6.82812C22.6875 7.03613 22.4675 7.14013 22.2355 7.14013Z"
+          fill="black" />
+      </svg>
+    </div>
+ 
+
+  <!-- Battery Health Widget -->
+  <!-- Unified EV Dashboard -->
+  <section class="about-section">
+    <div class="about-left">
+      <span class="section-number">01</span>
+    </div>
+
+    <div class="about-right">
+      <!-- Existing EV Dashboard -->
+      <div class="ev-dashboard">
+        <div class="speed">
+          <span id="speed">0</span>
+          <small>km/h</small>
+        </div>
+
+        <div class="battery-row">
+          <div class="battery-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <div class="battery-percent">
+            <span id="batteryValue">1%</span>
+            <p>Battery Health</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Content -->
+      <h2 class="about-title">About Us</h2>
+      <p class="about-text">
+        We are a dedicated EV Two-Wheeler Service Center focused on keeping your electric bike running at its best. As
+        EV technology grows, we aim to bridge the gap between riders and reliable service by offering expert
+        maintenance, transparent pricing, and quick turnaround time.
+
+        Our team is trained to handle battery diagnostics, motor servicing, controller checks, software updates, and
+        general EV maintenance for all major electric bike brands. Even without OEM approval initially, we strictly
+        follow manufacturer-recommended service procedures, ensuring your vehicle’s performance and safety are never
+        compromised.
+
+        Customer trust is our priority. From the moment you walk in, we provide clear explanations of issues, service
+        records, and honest recommendations—no hidden charges, no unnecessary replacements. If required, we also offer
+        on-site service support, so your EV gets help right where it’s needed.
+      </p>
+    </div>
+  </section>
+
+  </div>
+  <!-- Live Date -->
+  <div id="liveDate"></div>
+
+
+
+
+  <script>
+    let speed = 0;
+    const speedText = document.getElementById("speed");
+    const batteryValue = document.getElementById("batteryValue");
+    const bars = document.querySelectorAll(".battery-bars .bar");
+
+    setInterval(() => {
+      speed++;
+      if (speed > 100) speed = 0;
+
+      speedText.textContent = speed;
+      batteryValue.textContent = speed + "%";
+
+      bars.forEach(bar => bar.classList.remove("active"));
+      let level = Math.ceil(speed / 20);
+      for (let i = 0; i < level; i++) {
+        bars[i].classList.add("active");
+      }
+    }, 100);
+  </script>
+
+  <script>
+    function updateDate() {
+      const dateEl = document.getElementById("liveDate");
+      const today = new Date();
+
+      const options = {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      };
+
+      dateEl.textContent = today.toLocaleDateString('en-GB', options);
+    }
+
+    updateDate();
+
+    /* Update once every day */
+    setInterval(updateDate, 1000 * 60 * 60);
+  </script>
+
+  <!-- Scroll Rotate Gear -->
+  <!-- Gear Section -->
+  <section class="mission-section">
+    <div class="mission-left">
+      <img src="img/gear.png" id="gear" class="gear-center">
+    </div>
+
+    <div class="mission-right">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to redefine electric two-wheeler servicing by delivering reliable, transparent, and
+        technology-driven solutions that every EV rider can trust.
+
+        We are committed to ensuring that electric vehicles remain safe, efficient, and long-lasting through expert
+        diagnostics, precision maintenance, and the use of advanced tools. As EV technology evolves rapidly, we
+        continuously upgrade our skills and knowledge to stay ahead—so our customers never fall behind.
+
+        We believe servicing should not be confusing or expensive. That’s why we focus on honest communication, fair
+        pricing, and preventive maintenance, helping customers understand their vehicle’s health before problems arise.
+        By offering timely service, genuine recommendations, and on-site support when required, we aim to reduce
+        downtime and extend the life of every electric vehicle we handle.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        Our vision is to become a leading electric vehicle service ecosystem, setting new standards for quality, trust,
+        and innovation in the EV servicing industry.
+
+        We envision a future where electric mobility is accessible, dependable, and sustainable for everyone. By
+        building a strong foundation of skilled technicians, modern infrastructure, and data-driven diagnostics, we aim
+        to support the growing EV community across regions.
+
+        Beyond servicing, we aspire to be a knowledge hub for EV owners, educating riders about battery care,
+        performance optimization, and sustainable practices. As technology advances, our vision is to integrate smart
+        diagnostics, remote support, and predictive maintenance—minimizing breakdowns before they happen.
+      </p>
+    </div>
+  </section>
+
+  <section class="services-section">
+  <h2 class="services-title">Our Services</h2>
+
+  <div class="slider-container">
+    <div class="slider-track" id="sliderTrack">
+
+      <!-- CARD 1 -->
+      <div class="card" onclick="openPopup('img/1.jpg')">
+        <img src="img/service 1.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>Battery Diagnostics</h3>
+            <p>Complete battery health & performance check</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card" onclick="openPopup('img/2.jpg')">
+        <img src="img/service 2.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>Motor Servicing</h3>
+            <p>Motor inspection, repair & tuning</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card" onclick="openPopup('img/3.jpg')">
+        <img src="img/service 3.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>Controller Repair</h3>
+            <p>Controller diagnostics & fault fixing</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card" onclick="openPopup('img/4.jpg')">
+        <img src="img/service 4.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>Charging System</h3>
+            <p>Charger & port inspection</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card" onclick="openPopup('img/5.jpg')">
+        <img src="img/service 5.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>Software Update</h3>
+            <p>EV firmware & performance update</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card" onclick="openPopup('img/6.jpg')">
+        <img src="img/service 6.png" alt="">
+        <div class="card-overlay">
+          <div class="overlay-content">
+            <h3>General Service</h3>
+            <p>Complete EV inspection & maintenance</p>
+            <span class="play-btn">▶</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup-card">
+      <span class="close-btn" onclick="closePopup()">✖</span>
+      <img id="popupImg">
+      <div class="popup-actions">
+        <button class="watch">▶ Watch Now</button>
+        <button class="wishlist">＋ Add</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section>
+    <div class="contact-us-container">
+      <!-- Left: Clock -->
+      <div class="clock-container">
+        <div class="clock">
+          <!-- Clock numbers -->
+          <span style="--x: 1;"><b>1</b></span>
+          <span style="--x: 2;"><b>2</b></span>
+          <span style="--x: 3;"><b>3</b></span>
+          <span style="--x: 4;"><b>4</b></span>
+          <span style="--x: 5;"><b>5</b></span>
+          <span style="--x: 6;"><b>6</b></span>
+          <span style="--x: 7;"><b>7</b></span>
+          <span style="--x: 8;"><b>8</b></span>
+          <span style="--x: 9;"><b>9</b></span>
+          <span style="--x: 10;"><b>10</b></span>
+          <span style="--x: 11;"><b>11</b></span>
+          <span style="--x: 12;"><b>12</b></span>
+
+          <!-- Clock hands -->
+          <div style="--clr: #ff105e; --h: 60px;" class="stick" id="hours"><i></i></div>
+          <div style="--clr: #00e5ff; --h: 80px;" class="stick" id="minutes"><i></i></div>
+          <div style="--clr: #fff; --h: 100px;" class="stick" id="seconds"><i></i></div>
+        </div>
+      </div>
+      <div class="contact-wrapper">
+        <h2>Service Your EV</h2>
+
+        <form class="contact-form">
+          <div class="row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+
+          <input type="email" placeholder="email address" required>
+
+          <textarea placeholder="message" rows="6"></textarea>
+
+          <button type="submit">
+            Submit <span></span>
+          </button>
+        </form>
+      </div>
+
+
+  </section>
+
+  <!-- Right: Contact Info -->
+
+<audio id="serviceSound" loop preload="auto">
+  <source src="Bike.mp3" type="audio/mpeg">
+</audio> 
+  </section>
+
+<script>
+const missionSection  = document.querySelector(".mission-section");
+const servicesSection = document.querySelector(".services-section");
+
+let missionPlayed = false;
+let servicePlayed = false;
+
+/* fade helpers */
+function fadeOut(audio) {
+  let v = audio.volume;
+  const i = setInterval(() => {
+    if (v > 0.01) {
+      v -= 0.01;
+      audio.volume = v;
+    } else {
+      audio.pause();
+      clearInterval(i);
+    }
+  }, 60);
+}
+
+function fadeIn(audio) {
+  audio.volume = 0;
+  audio.play().catch(()=>{});
+  let v = 0;
+  const i = setInterval(() => {
+    if (v < 0.05) {
+      v += 0.01;
+      audio.volume = v;
+    } else {
+      clearInterval(i);
+    }
+  }, 60);
+}
+
+window.addEventListener("scroll", () => {
+  if (!audioUnlocked) return;
+
+  /* MISSION SECTION */
+  if (!missionPlayed && missionSection) {
+    const r1 = missionSection.getBoundingClientRect();
+    if (r1.top < window.innerHeight * 0.6) {
+      missionPlayed = true;
+      fadeOut(springSound);
+      fadeIn(missionSound);
+      console.log("Mission sound started");
+    }
+  }
+
+  /* SERVICES SECTION */
+  if (!servicePlayed && servicesSection) {
+    const r2 = servicesSection.getBoundingClientRect();
+    if (r2.top < window.innerHeight * 0.6) {
+      servicePlayed = true;
+      fadeOut(missionSound);
+      fadeIn(serviceSound);
+      console.log("Service sound started");
+    }
+  }
+});
+</script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    /* SECTION */
+    .stats-section {
+      background: radial-gradient(circle at top, #001b10, #000);
+      padding: 140px 40px;
+      overflow: hidden;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      position: relative;
+    }
+
+    /* DIAMOND CARD */
+    .stat-card {
+      width: 220px;
+      height: 220px;
+      background: rgba(0, 255, 140, 0.06);
+      border: 1px solid rgba(0, 255, 140, 0.3);
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* UP DOWN EFFECT */
+    .stat-card.up {
+      transform: translateY(-60px) rotate(45deg);
+    }
+
+    .stat-card.down {
+      transform: translateY(60px) rotate(45deg);
+    }
+
+    /* CONTENT STRAIGHT */
+    .stat-inner {
+      transform: rotate(-45deg);
+      text-align: center;
+      color: #fff;
+    }
+
+    .stat-icon {
+      font-size: 34px;
+      color: #00ff99;
+      margin-bottom: 12px;
+    }
+
+    .stat-inner h3 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .stat-inner p {
+      font-size: 14px;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .stats-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+      }
+
+      .stat-card.up,
+      .stat-card.down {
+        transform: rotate(45deg);
+      }
+    }
+  </style>
+  <!-- STATS SECTION -->
+  <section class="stats-section">
+    
+    <div class="stats-row">
+
+      <div class="stat-card up">
+        <div class="stat-inner">
+          <div class="stat-icon">⚡</div>
+          <h3 class="count" data-target="1200">0+</h3>
+          <p>Happy EV Riders</p>
+        </div>
+      </div>
+
+      <div class="stat-card down">
+        <div class="stat-inner">
+          <div class="stat-icon">👨‍🔧</div>
+          <h3 class="count" data-target="10">0+</h3>
+          <p>Certified Technicians</p>
+        </div>
+      </div>
+
+      <div class="stat-card up">
+        <div class="stat-inner">
+          <div class="stat-icon">🔍</div>
+          <h3 class="count percent" data-target="100">0%</h3>
+          <p>Transparent Diagnostics</p>
+        </div>
+      </div>
+
+      <div class="stat-card down">
+        <div class="stat-inner">
+          <div class="stat-icon">⏱️</div>
+          <h3 class="count hrs" data-target="48">0–48 Hrs</h3>
+          <p>Quick Service</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <section>
+<section class="cube-hero-section">
+  <!-- LEFT : 3D CUBE -->
+  <div class="cube-wrap">
+    <div class="cube">
+      <div class="top">MINZEN</div>
+      <div>
+        <span style="--x:1"><h2>ELECTRIC</h2></span>
+        <span style="--x:2"><h2>VEHICLE</h2></span>
+        <span style="--x:3"><h2>SERVICE</h2></span>
+        <span style="--x:4"><h2>CENTER</h2></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT : EV SERVICE CONTENT -->
+  <div class="hero-content">
+    <h1>
+      Fresh Energy,<br>
+      Reliable EV Service<br>
+      <span>Powering Your Ride.</span>
+    </h1>
+
+    <p class="sub-text">
+      Trusted electric two-wheeler service center delivering
+      expert diagnostics, transparent service, and fast turnaround.
+    </p>
+
+    <small class="badge">
+      ⚡ EV Specialists · Certified Technicians · Quick Service
+    </small>
+
+    <div class="hero-btns">
+      <a href="#services" class="btn primary">Start Your Service</a>
+      <a href="#contact" class="btn outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+<footer class="ev-footer">
+
+  <!-- TOP INFO BAR -->
+  <div class="footer-top">
+
+    <div class="footer-item">
+      <div class="icon">
+        <!-- PHONE SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1
+          c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.9.6.6 0 1 .4 1 1v3.4
+          c0 .6-.4 1-1 1C9.8 21.7 2.3 14.2 2.3 5c0-.6.4-1 1-1H6.7
+          c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.9.1.4 0 .8-.3 1.1l-2.1 2.1z"/>
+        </svg>
+      </div>
+      <div>
+        <h4>+91 98765 43210</h4>
+        <p>Mon–Sat 9am–7pm</p>
+      </div>
+    </div>
+
+    <div class="footer-item">
+      <div class="icon">
+        <!-- EMAIL SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M2 6c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v12
+          c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6zm2 0 8 5 8-5H4zm16 12V8l-8 5-8-5v10h16z"/>
+        </svg>
+      </div>
+      <div>
+        <h4>minzen@gmail.com</h4>
+        <p>Online EV Support</p>
+      </div>
+    </div>
+
+    <div class="footer-item">
+      <div class="icon">
+        <!-- LOCATION SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5
+          a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+      </div>
+      <div>
+        <h4>Madurai, India</h4>
+        <p>Tamil Nadu, IN</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>Connect with us on social media</p>
+
+    <div class="social-icons">
+
+      <!-- FACEBOOK -->
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5
+          c0-2.4 1.4-3.8 3.6-3.8 1 0 2 .1 2 .1v2.3h-1.1
+          c-1.1 0-1.4.7-1.4 1.4V12H16l-.4 3h-2.3v7A10 10 0 0 0 22 12z"/>
+        </svg>
+      </a>
+
+      <!-- TWITTER (X) -->
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M22 5.9c-.8.4-1.6.6-2.5.8.9-.6 1.5-1.4 1.8-2.4
+          -.9.6-1.9 1-3 1.2a4.3 4.3 0 0 0-7.3 3c0 .3 0 .6.1.9
+          -3.6-.2-6.7-1.9-8.8-4.6-.4.6-.6 1.4-.6 2.1
+          0 1.5.8 2.9 2 3.7-.7 0-1.4-.2-2-.5v.1
+          c0 2.1 1.5 4 3.5 4.4-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1
+          .6 1.9 2.4 3.2 4.5 3.2A8.7 8.7 0 0 1 2 19.5
+          12.3 12.3 0 0 0 8.7 21c8.1 0 12.5-6.7 12.5-12.5v-.6z"/>
+        </svg>
+      </a>
+
+      <!-- LINKEDIN -->
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M4.9 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3
+          9h3.8v12H3V9zm7 0h3.6v1.6h.1c.5-.9 1.8-1.9 3.6-1.9
+          3.9 0 4.6 2.6 4.6 5.9V21h-3.8v-5.3c0-1.3 0-3-1.8-3
+          -1.8 0-2.1 1.4-2.1 2.9V21H10V9z"/>
+        </svg>
+      </a>
+
+      <!-- INSTAGRAM -->
+      <a href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7
+          a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10
+          5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 1-2.2 0
+          1.1 1.1 0 0 1 2.2 0z"/>
+        </svg>
+      </a>
+
+    </div>
+  </div>
+
+</footer>
+<div class="footer-main">
+
+  <!-- COMPANY -->
+  <div class="footer-col">
+    <h4>MINZEN EV</h4>
+    <span class="line"></span>
+    <p>
+      Minzen is a trusted electric vehicle service center
+      providing professional diagnostics, repair, and
+      maintenance for electric two-wheelers.
+    </p>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="footer-col">
+    <h4>Our Services</h4>
+    <span class="line"></span>
+    <ul>
+      <li>EV Battery Diagnostics</li>
+      <li>Motor & Controller Repair</li>
+      <li>Charging System Service</li>
+      <li>General EV Maintenance</li>
+    </ul>
+  </div>
+
+  <!-- USEFUL LINKS -->
+  <div class="footer-col">
+    <h4>Useful Links</h4>
+    <span class="line"></span>
+    <ul>
+      <li>Book a Service</li>
+      <li>Service Packages</li>
+      <li>Warranty Support</li>
+      <li>FAQs & Help</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="footer-col">
+    <h4>Contact Us</h4>
+    <span class="line"></span>
+    <ul class="contact-list">
+
+  <li>
+    <span class="icon">
+      <!-- LOCATION -->
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 8 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+      </svg>
+    </span>
+    Chennai, Tamil Nadu
+  </li>
+
+  <li>
+    <span class="icon">
+      <!-- PHONE -->
+      <svg viewBox="0 0 24 24">
+        <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.5 2.7.8 4.2.8.7 0 1.2.5 1.2 1.2V21c0 .7-.5 1.2-1.2 1.2C10.5 22.2 1.8 13.5 1.8 3.2 1.8 2.5 2.3 2 3 2h3.6c.7 0 1.2.5 1.2 1.2 0 1.4.3 2.9.8 4.2.1.4 0 .9-.3 1.2l-2.3 2.2z"/>
+      </svg>
+    </span>
+    +91 98765 43210
+  </li>
+
+  <li>
+    <span class="icon">
+      <!-- EMAIL -->
+      <svg viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </span>
+    support@minzen.com
+  </li>
+
+  <li>
+    <span class="icon">
+      <!-- CLOCK -->
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 11h-4V7h2v4h2v2z"/>
+      </svg>
+    </span>
+    Mon–Sat : 9AM – 7PM
+  </li>
+
+</ul>
+
+  </div>
+
+</div>
+
+
+<!-- LEAF RAIN -->
+<div class="leaf-rain">
+  <img src="img/leaf1.jpg" class="rain-leaf l1">
+  <img src="img/leaf1.jpg" class="rain-leaf l2">
+  <img src="img/leaf1.jpg" class="rain-leaf l3">
+</div>
+<audio id="bgSound" loop preload="auto">
+  <source src="spring.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const bgSound = document.getElementById("bgSound");
+
+// set LOW volume first
+bgSound.volume = 0.1;   // 👈 soft sound
+bgSound.muted = true;
+
+// try play immediately (muted autoplay allowed)
+bgSound.play().catch(()=>{});
+
+function startSound() {
+  bgSound.muted = false;
+
+  // play immediately – no fade delay
+  bgSound.play().catch(()=>{});
+
+  // remove listeners
+  document.removeEventListener("click", startSound);
+  document.removeEventListener("touchstart", startSound);
+  document.removeEventListener("keydown", startSound);
+}
+
+// FASTEST reliable triggers
+document.addEventListener("click", startSound, { once: true });
+document.addEventListener("touchstart", startSound, { once: true });
+document.addEventListener("keydown", startSound, { once: true });
+</script>
+
+
+  <!-- COUNTING SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.count');
+    let started = false;
+
+    function startCount() {
+      if (started) return;
+      started = true;
+
+      counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let count = 0;
+        const speed = 100;
+
+        const update = () => {
+          const increment = Math.ceil(target / speed);
+          count += increment;
+
+          if (count < target) {
+            if (counter.classList.contains('percent')) {
+              counter.innerText = count + '%';
+            } else if (counter.classList.contains('hrs')) {
+              counter.innerText = '0–' + count + ' Hrs';
+            } else {
+              counter.innerText = count + '+';
+            }
+            setTimeout(update, 20);
+          } else {
+            if (counter.classList.contains('percent')) {
+              counter.innerText = target + '%';
+            } else if (counter.classList.contains('hrs')) {
+              counter.innerText = '24–48 Hrs';
+            } else {
+              counter.innerText = target + '+';
+            }
+          }
+        };
+        update();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.stats-section');
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        startCount();
+      }
+    });
+  </script>
+
+
+  <script>
+    const slider = document.getElementById("servicesRow");
+
+    function slideRight() {
+      slider.scrollLeft += 300;
+    }
+
+    function slideLeft() {
+      slider.scrollLeft -= 300;
+    }
+  </script>
+
+
+  <script>
+    const gear = document.getElementById("gear");
+
+    window.addEventListener("scroll", () => {
+      const section = document.querySelector(".gear-section");
+      const rect = section.getBoundingClientRect();
+
+      /* Rotate only when section is visible */
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const progress = window.innerHeight - rect.top;
+        gear.style.transform = `rotate(${progress * 0.8}deg)`;
+      }
+    });
+  </script>
+  <script>
+    const track = document.getElementById("sliderTrack");
+    const cards = document.querySelectorAll(".card");
+
+    // Clone first few cards for infinite loop
+    const cloneCount = 3; // number of cards visible
+    for (let i = 0; i < cloneCount; i++) {
+      const clone = cards[i].cloneNode(true);
+      track.appendChild(clone);
+    }
+
+    let index = 0;
+    const cardStyle = getComputedStyle(cards[0]);
+    const cardWidth = cards[0].offsetWidth + parseInt(cardStyle.marginRight);
+
+    function moveSlider() {
+      index++;
+      track.style.transition = "transform 0.6s ease";
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+      // Reset after last clone
+      if (index === cards.length) {
+        setTimeout(() => {
+          track.style.transition = "none"; // remove transition
+          track.style.transform = `translateX(0px)`; // jump back
+          index = 0;
+        }, 600); // wait for animation to finish
+      }
+    }
+
+    setInterval(moveSlider, 3000);
+
+
+    /* POPUP */
+    function openPopup(img) {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("popupImg").src = img;
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    let hours = document.getElementById('hours');
+    let minutes = document.getElementById('minutes');
+    let seconds = document.getElementById('seconds');
+
+    function displayTime() {
+      let date = new Date();
+      let hr = date.getHours();
+      let mn = date.getMinutes();
+      let sc = date.getSeconds();
+
+      let hrRotation = 30 * hr + mn / 2;
+      let mnRotation = 6 * mn;
+      let scRotation = 6 * sc;
+
+      hours.style.transform = `rotate(${hrRotation}deg)`;
+      minutes.style.transform = `rotate(${mnRotation}deg)`;
+      seconds.style.transform = `rotate(${scRotation}deg)`;
+    }
+
+    setInterval(displayTime, 1000);
+    displayTime();
+
+
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
