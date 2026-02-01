@@ -34,19 +34,44 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin-top: -200px;
+}
+
+@media (max-width: 768px){
+  .svg1{
+    width: 250px;
+  }
+  .about-section{
+    margin-top: -400px;
+  }
 }
 
 .banner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('img/valentin-petrov-m-mal-01.png');
+background: linear-gradient(
+    to bottom,
+    #000000,
+    #113111,
+    #000000
+  );
+
+  animation: bgGlow 6s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
   background-size: cover;
   background-position: center;
   animation: bgZoomIn 4s ease-in-out 1 forwards;
   z-index: -1;
   pointer-events: none;
 }
+@keyframes bgGlow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.12); }
+  100% { filter: brightness(1); }
+}
+
 
 .banner::after {
   content: '';
@@ -60,6 +85,15 @@ body {
   z-index: -1;
   pointer-events: none;
 }
+
+.about {
+ background: linear-gradient(
+    to bottom,
+    #000000,
+    #164916
+  );
+}
+
 
 @keyframes bgZoomIn {
   from {
@@ -83,7 +117,7 @@ body {
 
 svg path {
   fill: transparent;
-  stroke: #fff;
+  stroke:#717b70 ;
   stroke-width: 0.1;
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
@@ -100,7 +134,7 @@ svg path {
   }
 
   100% {
-    fill: #fff;
+    fill: #717b70;
     stroke-dashoffset: 0;
   }
 }
@@ -111,7 +145,8 @@ svg path {
   padding: 70px 30px 30px;
   border: 2px solid white;
   border-radius: 18px;
-  background: black;
+  color: white;
+  background: #717b70;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
 
   margin: 0 auto;
@@ -215,7 +250,7 @@ svg path {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background:black;
 }
 
 /* Gear Image */
@@ -233,10 +268,18 @@ svg path {
   gap: 60px;
   align-items: center;
   padding: 80px 40px;
-  background: black;
   color: white;
   margin-top: -120px;
 }
+
+@media (max-width: 768px){
+  .about-section{
+    margin: top 450px; ;
+  }
+  
+}
+
+
 
 out-section {
 
@@ -276,6 +319,8 @@ out-section {
   margin-top: 40px;
   font-size: 32px;
   letter-spacing: 2px;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .about-text {
@@ -283,6 +328,9 @@ out-section {
   font-size: 14px;
   line-height: 1.8;
   opacity: 0.8;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
+
 }
 
 
@@ -290,10 +338,10 @@ out-section {
   display: flex;
   align-items: center;
   padding: 120px 80px;
-  background: black;
+ background: black;
   color: white;
   gap: 80px;
-  margin-top: -150px;
+  margin-top: -50px;
 }
 
 .mission-left img {
@@ -303,6 +351,8 @@ out-section {
 .mission-right h2 {
   font-size: 28px;
   margin-bottom: 10px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .mission-right p {
@@ -310,6 +360,8 @@ out-section {
   opacity: 0.8;
   line-height: 1.7;
   margin-bottom: 30px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .navbar {
@@ -574,6 +626,8 @@ out-section {
   color: #ffffff;
   margin-bottom: 50px;
   letter-spacing: 2px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
 }
 @media (max-width: 600px) {
   .services-title {
@@ -622,7 +676,7 @@ out-section {
   gap: 50px;
   /* space between clock and info */
   padding: 50px;
-  background-color: #0a0a0a;
+  background-color: #ffffff;
   /* dark background */
   color: #e6f0c0;
   flex-wrap: wrap;
@@ -633,19 +687,17 @@ out-section {
   flex: 1;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 .clock {
   position: relative;
   width: 250px;
   height: 250px;
-  background-color: rgba(1, 11, 17, 0.25);
+  background-color: white;
   border-radius: 50%;
   border: 3px solid #0a1b24;
-  box-shadow: 0 -8px 16px rgba(255, 255, 255, 0.05),
-    inset 0 -8px 16px rgba(255, 255, 255, 0.05),
-    0 8px 16px rgba(0, 0, 0, 0.3),
-    inset 0 8px 16px rgba(0, 0, 0, 0.3);
+  
 }
 
 .clock span {
@@ -702,6 +754,7 @@ out-section {
 
 #seconds i {
   width: 2px;
+  
 }
 
 .contact-info {
@@ -728,14 +781,13 @@ out-section {
   padding: 18px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: 0.3s ease;
 }
 
 .contact-card:hover {
-  background: rgba(217, 255, 143, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(217, 255, 143, 0.15);
+ 
 }
 
 .contact-card .icon {
@@ -751,6 +803,8 @@ out-section {
 .contact-card p {
   font-size: 14px;
   margin-top: 4px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
 }
 @media (max-width: 600px) {
   .contact-cards {
@@ -764,8 +818,9 @@ out-section {
   background: #ffffff;
   padding: 40px;
   border-radius: 14px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-  font-family: "Poppins", sans-serif;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;
 }
 .contact-wrapper,
 .contact-wrapper * {
@@ -820,7 +875,7 @@ out-section {
 
 .contact-form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(160,32,240,0.35);
+ 
 }
 
 /* Responsive */
@@ -846,6 +901,8 @@ out-section {
   padding: 140px 40px;
   overflow: hidden;
 }
+
+
 
 .stats-row {
   display: flex;
@@ -900,6 +957,338 @@ out-section {
   opacity: 0.9;
 }
 
+.speed-meter {
+  width: 120px;
+  margin: 0 auto 10px;
+  position: relative;
+}
+
+.speed-meter svg {
+  width: 100%;
+}
+
+.meter-bg,
+.meter-progress {
+  fill: none;              /* ❌ white fill remove */
+}
+.meter-bg {
+  stroke-width: 8;
+  opacity: 0;
+}
+
+.meter-progress {
+  stroke-width: 8;
+  filter: drop-shadow(0 0 6px #ffffff);
+}
+
+
+.meter-progress {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 252;
+  stroke-dashoffset: 252;
+  animation: meterFill 2s ease forwards;
+}
+
+.needle {
+  stroke: #fff;
+  stroke-width: 3;
+  transform-origin: 100px 100px;
+  animation: needleMove 2s ease forwards;
+}
+
+.meter-value {
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.mini-analytics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-analytics svg {
+  width: 110px;
+  height: 40px;
+}
+
+.line-graph {
+  fill: none;
+  stroke: #678378;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.mini-analytics h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #91afa3;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
+}
+
+/* ===================== */
+/* SCOPE */
+/* ===================== */
+
+.scope {
+  position: relative;
+  width: 60px;
+  margin: 0 auto 10px;
+  animation: scopeFloat 3s ease-in-out infinite;
+}
+
+.lens {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid #515f5a;
+  background: rgba(0,255,153,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.handle {
+  position: absolute;
+  width: 26px;
+  height: 4px;
+  background: #555f5b;
+  bottom: -6px;
+  right: -8px;
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+
+/* ===================== */
+/* SCOOTER SVG */
+/* ===================== */
+
+.scooter-svg {
+  width: 36px;
+  height: auto;
+  stroke: #3c4743;
+  stroke-width: 3;
+  fill: none;
+  animation: scooterPulse 2.5s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* ===================== */
+/* SCAN LINE */
+/* ===================== */
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #cf3838,
+    transparent
+  );
+  top: 0;
+  animation: scanMove 2.5s linear infinite;
+  opacity: 0.8;
+}
+
+/* ===================== */
+/* ANIMATIONS */
+/* ===================== */
+
+@keyframes scopeFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes scanMove {
+  from { top: 0; }
+  to { top: 42px; }
+}
+
+@keyframes scooterPulse {
+  0%,100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes meterFill {
+  to {
+    stroke-dashoffset: 158; /* 37% */
+  }
+}
+
+@keyframes needleMove {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-25deg);
+  }
+}
+
+/* ===================== */
+/* SVG ANALOG CLOCK */
+/* ===================== */
+
+.svg-clock {
+  width: 50px;
+  margin: 0 auto 10px;
+}
+
+.svg-clock svg {
+  width: 100%;
+  height: auto;
+}
+
+/* CLOCK BORDER */
+.clock-border {
+  fill: rgba(255, 255, 255, 0.06);
+  stroke: #00ff99;
+  stroke-width: 3;
+}
+
+/* CENTER */
+.clock-center {
+  fill: #00ff99;
+}
+
+/* HAND COMMON */
+.hand {
+  stroke-linecap: round;
+  transform-origin: 50px 50px;
+}
+
+/* HOUR HAND */
+.hand.hour {
+  stroke: #00ff99;
+  stroke-width: 4;
+  animation: spin 2s linear infinite;
+}
+
+/* MINUTE HAND */
+.hand.minute {
+  stroke: #00ff99;
+  stroke-width: 3;
+  animation: spin 1.2s linear infinite;
+}
+
+/* SECOND HAND */
+.hand.second {
+  stroke: #ffffff;
+  stroke-width: 2;
+  animation: spin 0.6s linear infinite;
+}
+
+/* ROTATION */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.meter-progress {
+  animation: meterFill 2s ease-in-out infinite alternate;
+}
+
+.needle {
+  animation: needleMove 2s ease-in-out infinite alternate;
+}
+.line-graph {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 2s ease-in-out infinite;
+}
+.scope {
+  animation: scopeFloat 3s ease-in-out infinite;
+}
+
+.scan-line {
+  animation: scanMove 2.5s linear infinite;
+}
+
+.scooter-svg {
+  animation: scooterPulse 2.5s ease-in-out infinite;
+}
+.hand.hour {
+  animation: spin 2s linear infinite;
+}
+
+.hand.minute {
+  animation: spin 1.2s linear infinite;
+}
+
+.hand.second {
+  animation: spin 0.6s linear infinite;
+}
+@keyframes meterFill {
+  0% { stroke-dashoffset: 252; }
+  100% { stroke-dashoffset: 158; }
+}
+
+@keyframes needleMove {
+  from { transform: rotate(-90deg); }
+  to { transform: rotate(-25deg); }
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes scopeFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes scanMove {
+  from { top: 0; }
+  to { top: 42px; }
+}
+
+@keyframes scooterPulse {
+  0%,100% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
 /* FORCE CLEAN MOBILE VIEW */
 @media (max-width: 768px) {
 
@@ -947,12 +1336,20 @@ out-section {
   }
 }
 
+/* INSTANT REMOVE OF EXISTING DIAMOND */
+.stat-card.remove-shape {
+  background: none !important;
+  border: none !important;
+}
+
 
 /* CONTAINER MUST BE RELATIVE */
 .stats-section {
   position: relative;
   overflow: hidden;
 }
+
+
 
 /* LEAF RAIN WRAPPER */
 .leaf-rain {
@@ -970,9 +1367,10 @@ out-section {
 }
 
 /* DIFFERENT START POSITIONS */
-.rain-leaf.l1 { left: 20%; animation: leafFall1 6s linear infinite; }
-.rain-leaf.l2 { left: 50%; animation: leafFall2 7s linear infinite; }
-.rain-leaf.l3 { left: 80%; animation: leafFall3 5.5s linear infinite; }
+.rain-leaf.l1 { left: 20%; animation: leafFall1 6s linear forwards; }
+.rain-leaf.l2 { left: 50%; animation: leafFall2 7s linear forwards; }
+.rain-leaf.l3 { left: 80%; animation: leafFall3 5.5s linear forwards; }
+
 
 /* LEAF ANIMATIONS – DIFFERENT DIRECTIONS */
 @keyframes leafFall1 {
@@ -1126,6 +1524,8 @@ out-section {
   line-height: 1.25;
   font-weight: 700;
   margin-bottom: 20px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .hero-content h1 span{
@@ -1225,6 +1625,8 @@ out-section {
   background: linear-gradient(to top,#000,#0a0a0a);
   color:#fff;
   font-family:"Poppins",sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 /* TOP BAR */
@@ -1246,11 +1648,15 @@ out-section {
 .footer-item h4{
   font-size:16px;
   font-weight:600;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .footer-item p{
   font-size:13px;
   opacity:0.7;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 /* ICONS */
@@ -1273,6 +1679,8 @@ out-section {
 .footer-bottom p{
   font-size:14px;
   opacity:0.85;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 /* SOCIAL */
@@ -1319,6 +1727,8 @@ out-section {
   font-size:18px;
   font-weight:600;
   margin-bottom:10px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .footer-col .line{
@@ -1333,11 +1743,15 @@ out-section {
   font-size:14px;
   line-height:1.7;
   opacity:0.8;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .footer-col ul{
   list-style:none;
   padding:0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .footer-col ul li{
@@ -1346,6 +1760,8 @@ out-section {
   opacity:0.85;
   transition:0.3s;
   cursor:pointer;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .footer-col ul li:hover{
@@ -1379,6 +1795,8 @@ out-section {
   font-size:14px;
   margin-bottom:14px;
   opacity:0.9;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em; 
 }
 
 .contact-list .icon{
@@ -1399,4 +1817,351 @@ out-section {
 
 .contact-list li:hover{
   color:#00ff99;
+}
+
+
+/* ========================= */
+/* LIGHT THEME OVERRIDES */
+/* ========================= */
+
+body.light-theme {
+  background: #f5f7fa;
+  color: #111;
+}
+
+/* text color fix */
+body.light-theme * {
+  color: #111 !important;
+}
+
+/* sections */
+body.light-theme .banner,
+body.light-theme .about,
+body.light-theme .mission-section,
+body.light-theme .stats-section,
+body.light-theme .gear-section {
+  background: #ffffff !important;
+}
+
+/* cards */
+body.light-theme .stat-card {
+  background: rgba(0, 160, 99, 0.08) !important;
+  border: 1px solid rgba(0, 160, 99, 0.4) !important;
+}
+
+/* stat numbers */
+body.light-theme .stat-inner h3 {
+  color: #00a063 !important;
+}
+
+/* icons */
+body.light-theme .stat-icon,
+body.light-theme .meter-value {
+  color: #00a063 !important;
+}
+
+/* svg strokes */
+body.light-theme svg {
+  stroke: #00a063;
+}
+
+/* navbar */
+body.light-theme .navbar {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+}
+
+body.light-theme .nav-logo,
+body.light-theme .navbar nav a {
+  color: #111 !important;
+}
+
+/* footer */
+body.light-theme .ev-footer,
+body.light-theme .footer-main {
+  background: #f0f0f0;
+}
+
+body.light-theme .footer-col p,
+body.light-theme .footer-col li {
+  color: #222 !important;
+}
+
+/* =============================== */
+/* FORCE EV DASHBOARD TEXT = WHITE */
+/* =============================== */
+
+body.light-theme .ev-dashboard,
+body.light-theme .ev-dashboard * {
+  color: #ffffff !important;
+}
+
+/* numbers & labels */
+body.light-theme .ev-dashboard .speed,
+body.light-theme .ev-dashboard .speed small,
+body.light-theme .ev-dashboard .battery-percent span,
+body.light-theme .ev-dashboard .battery-percent p {
+  color: #ffffff !important;
+}
+
+/* battery bars */
+body.light-theme .ev-dashboard .battery-bars .bar {
+  border-color: #ffffff !important;
+}
+
+body.light-theme .ev-dashboard .battery-bars .bar.active {
+  background: #ffffff !important;
+}
+
+/* =============================== */
+/* ABOUT SECTION – FORCE WHITE BG */
+/* =============================== */
+
+body.light-theme .about-section {
+  background: #ffffff !important;
+}
+
+/* text readable */
+body.light-theme .about-section .about-title,
+body.light-theme .about-section .about-text {
+  color: #111 !important;
+}
+
+/* big section number light green */
+body.light-theme .about-section .section-number {
+  color: #1da171 !important;
+  opacity: 100%;
+}
+
+/* ================================= */
+/* CONTACT SECTION – LIGHT THEME FIX */
+/* ================================= */
+
+/* whole section background */
+body.light-theme section .contact-us-container {
+  background: #ffffff !important;
+}
+
+/* LEFT CLOCK AREA – keep dark look */
+body.light-theme .clock-container {
+  background: transparent !important;
+}
+
+body.light-theme .clock {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: #ffffff;
+}
+
+/* clock numbers visible */
+body.light-theme .clock span b {
+  color: #030303 !important;
+  opacity: 0.6;
+}
+
+/* RIGHT FORM CARD */
+body.light-theme .contact-wrapper {
+  background: #ffffff !important;
+  
+}
+
+/* heading */
+body.light-theme .contact-wrapper h2 {
+  color: #111 !important;
+}
+
+/* inputs & textarea */
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+  background: #ffffff !important;
+  color: #111 !important;
+  border: 1px solid #d9d9d9;
+}
+
+/* placeholders */
+body.light-theme .contact-form input::placeholder,
+body.light-theme .contact-form textarea::placeholder {
+  color: #888;
+}
+
+/* submit button */
+body.light-theme .contact-form button {
+  background: #00a063 !important;
+  color: #ffffff !important;
+}
+
+/* =============================== */
+/* REMOVE STAT CARD DIAMOND FULLY */
+/* =============================== 
+/* ======================================= */
+/* HARD RESET – REMOVE STAT SQUARE COMPLETELY */
+/* ======================================= */
+
+body.light-theme .stats-section .stat-card {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* remove zig-zag + rotation */
+body.light-theme .stats-section .stat-card,
+body.light-theme .stats-section .stat-card.up,
+body.light-theme .stats-section .stat-card.down {
+  transform: none !important;
+}
+/* ======================================= */
+/* FINAL RESET – FIX TILTED CONTENT */
+/* ======================================= */
+
+body.light-theme .stats-section .stat-card,
+body.light-theme .stats-section .stat-inner {
+  transform: none !important;
+}
+body.light-theme .stats-section .stat-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body.light-theme .stats-section * {
+  color: #717b70 !important;
+}
+
+body.light-theme .stats-section svg * {
+  stroke: #717b70 !important;
+  fill: none !important;
+}
+
+/* ======================================= */
+/* SERVICES SECTION – TEXT ONLY WHITE */
+/* ======================================= */
+
+/* section title */
+body.light-theme .services-section .services-title {
+  color: #464646 !important;
+  
+}
+body.light-theme .services-section{
+  background-color: #fff;
+}
+
+/* card overlay headings */
+body.light-theme .services-section .overlay-content h3 {
+  color: #ffffff !important;
+}
+
+/* card overlay paragraphs */
+body.light-theme .services-section .overlay-content p {
+  color: #ffffff !important;
+}
+
+/* HERO */
+.video-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.85));
+  color: #ffffff;
+  z-index: 2;
+}
+
+.hero-overlay h1{
+  font-size: 72px;
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+
+.hero-overlay{
+  z-index: 2;
+}
+
+.hero-video{
+  z-index: 1;
+}
+
+
+.hero-overlay p {
+  font-size: 18px;
+  max-width: 420px;
+  margin: 14px 0 28px;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* MODAL */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-modal video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+.stats-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 80px;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.02em;   /* premium tight look */
 }
