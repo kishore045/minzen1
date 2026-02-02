@@ -104,7 +104,7 @@ body {
   }
 }
 
-svg path {
+.svg1 path {
   fill: transparent;
   stroke:#252525 ;
   stroke-width: 0.1;
@@ -2724,4 +2724,496 @@ tr {
   margin-top: 18px;
   font-size: 15px;
   letter-spacing: 1px;
+}
+
+/* LOGIN SCREEN */
+.login-screen{
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg,#f5f7fa,#ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* CARD */
+.login-card{
+  width: 420px;
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+  animation: fadeUp 0.8s ease;
+}
+
+/* HELLO TEXT */
+.hello-text{
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  background: linear-gradient(90deg,#00a063,#00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* WELCOME TEXT */
+.welcome-text{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.welcome-text span{
+  background: linear-gradient(90deg,#0b7a65,#00ff99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUBTITLE */
+.subtitle{
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: slideUp 0.9s ease;
+}
+
+.login-form input{
+  padding: 16px 18px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input:focus{
+  border-color: #0b7a65;
+  box-shadow: 0 0 0 2px rgba(11,122,101,0.15);
+}
+
+/* BUTTON */
+.login-form button{
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg,#0b7a65,#00ff99);
+  transition: 0.3s;
+}
+
+.login-form button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,160,99,0.35);
+}
+
+/* ERROR */
+.error{
+  color: #e74c3c;
+  font-size: 13px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+  .login-card{
+    width: 92%;
+    padding: 40px 24px;
+  }
+
+  .hello-text{
+    font-size: 48px;
+  }
+}
+
+#introWhite{
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* COMMON */
+.intro{
+  position: absolute;
+  opacity: 0;
+}
+
+/* HELLO */
+.hello{
+  animation: helloIn 2s ease forwards; /* ⏱ SLOW */
+}
+
+.hello h1{
+  font-size: 110px;        /* 👀 BIG */
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -3px;
+}
+
+/* WELCOME */
+.welcome h2{
+  font-size: 60px;
+  font-weight: 600;
+  color: #111;
+}
+
+.welcome span{
+  background: linear-gradient(90deg,#00a063,#00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ANIMATIONS */
+@keyframes helloIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes helloOut{
+  to{
+    opacity: 0;
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes welcomeIn{
+  from{
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes overlayOut{
+  to{
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+
+.login-wrapper{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:#ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* TEXT */
+.login-hero{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.login-hero h1{
+  font-size:72px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.login-hero h2{
+  font-size:36px;
+}
+
+.login-hero span{
+  background:linear-gradient(90deg,#ff9800,#00a063);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.login-hero p{
+  opacity:.6;
+}
+
+/* FORM */
+.login-box{
+  width:340px;
+  background:#f9f9f9;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.login-box input{
+  padding:16px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:15px;
+}
+
+.login-box button{
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  background:#111;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+}
+
+/* TRAFFIC */
+.traffic-wrapper{
+  margin-top:28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.traffic-line{
+  width:2px;
+  height:40px;
+  background:#111;
+}
+
+/* DEFAULT OFF (WHITE LOOK) */
+#red, #orange, #green{
+  fill:#e5e5e5;
+  filter:none;
+  transition:0.3s ease;
+}
+
+
+
+/* VIDEO HOLDER */
+.status-video{
+  margin-top: 26px;
+  width: 260px;
+  height: 80px;
+  position: relative;
+}
+
+/* ALL VIDEOS */
+.status-video video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  display: none;
+}
+
+/* DEFAULT WHITE LOOK */
+.status-video::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:40px;
+  border:1px solid #ddd;
+}
+
+/* ===============================
+   LOGIN SCREEN BASE
+================================ */
+
+.login-screen{
+  position: fixed;
+  inset: 0;
+  background: #ffffff;     /* default white */
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* ===============================
+   BACKGROUND VIDEO LAYER
+================================ */
+
+.login-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 1;              /* 👈 BELOW login card */
+  overflow: hidden;
+}
+
+/* ALL VIDEOS */
+.login-bg video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;           /* JS will toggle */
+}
+
+/* ===============================
+   WHITE OVERLAY (READABILITY)
+================================ */
+
+.login-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.65); /* 👈 overlap effect */
+  z-index: 2;
+}
+
+/* ===============================
+   LOGIN CARD ABOVE VIDEO
+================================ */
+
+.login-card,
+.login-box,
+.login-wrapper{
+  position: relative;
+  z-index: 5;              /* 👈 ABOVE video + overlay */
+}
+
+/* LOGIN SCREEN */
+.login-screen{
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* VIDEO LAYER */
+.login-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.login-bg video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* WHITE OVERLAY */
+.login-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  
+  z-index: 2;
+}
+
+/* LOGIN CONTENT ABOVE */
+.login-card{
+  position: relative;
+  z-index: 5;
+}
+
+
+/* ================================
+   LOGIN WHITE FIX – OVERRIDE ONLY
+   (PASTE AT VERY END OF CSS)
+================================ */
+
+/* 1️⃣ FULL WHITE BACKGROUND FORCE */
+.login-screen,
+#introWhite{
+  background: #ffffff !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+/* 2️⃣ KILL ALL OVERLAYS & GLOWS BEHIND */
+.login-screen::before,
+.login-screen::after,
+#introWhite::before,
+#introWhite::after,
+.banner::before,
+.banner::after{
+  content: none !important;
+  display: none !important;
+}
+
+/* 3️⃣ LOGIN CARD – PURE WHITE */
+.login-card,
+.login-box{
+  background: #ffffff !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15) !important;
+}
+
+/* 4️⃣ TEXT COLOR FIX (GLOBAL * COLOR OVERRIDE ISSUE) */
+.login-card *,
+.login-box *{
+  color: #111 !important;
+}
+
+/* 5️⃣ INPUT VISIBILITY */
+.login-card input,
+.login-box input{
+  background: #ffffff !important;
+  color: #111 !important;
+  border: 1px solid #dcdcdc !important;
+}
+
+/* 6️⃣ PLACEHOLDER COLOR */
+.login-card input::placeholder{
+  color: #999 !important;
+}
+
+/* 7️⃣ BUTTON SAFE */
+.login-card button,
+.login-box button{
+  opacity: 1 !important;
+  filter: none !important;
 }

@@ -23,19 +23,126 @@
 
 <body>
 
+  <!-- INTRO OVERLAY -->
+<div id="introWhite">
+
+  <div class="intro hello">
+    <h1>Hello!</h1>
+  </div>
+
+  <div class="intro welcome">
+    <h2>Welcome to <span>Minzen</span></h2>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+  const overlay = document.getElementById("introWhite");
+  const hello   = document.querySelector(".hello");
+  const welcome = document.querySelector(".welcome");
+
+  // STEP 2 – Show Welcome
+  setTimeout(()=>{
+    hello.style.animation = "helloOut 0.8s ease forwards";
+    welcome.style.animation = "welcomeIn 1s ease forwards";
+    welcome.style.opacity = "1";
+  },1200);
+
+  // STEP 3 – Remove overlay
+  setTimeout(()=>{
+    overlay.style.animation = "overlayOut 0.8s ease forwards";
+  },2600);
+
+  setTimeout(()=>{
+    overlay.remove();
+  },3400);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+  const overlay = document.getElementById("introWhite");
+  const hello   = document.querySelector(".hello");
+  const welcome = document.querySelector(".welcome");
+
+  /* Hello stays longer */
+  setTimeout(()=>{
+    hello.style.animation = "helloOut 1.2s ease forwards";
+    welcome.style.animation = "welcomeIn 1.5s ease forwards";
+    welcome.style.opacity = "1";
+  }, 3000);   // ⏱ 3 seconds hold
+
+  /* Remove overlay slowly */
+  setTimeout(()=>{
+    overlay.style.animation = "overlayOut 1.2s ease forwards";
+  }, 6000);   // ⏱ total 6 sec
+
+  setTimeout(()=>{
+    overlay.remove();
+  }, 7500);   // ⏱ full finish
+
+});
+</script>
+
+ <!-- LOGIN BACKGROUND VIDEOS -->
+
+
+
   <div id="loginScreen" class="login-screen">
-  <div class="login-box">
 
-    <h2>Login to Continue</h2>
 
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+    <div class="login-bg">
+  <video id="bgRed" muted loop>
+    <source src="red.mp4" type="video/mp4">
+  </video>
 
-    <button onclick="login()">Login</button>
+  <video id="bgOrange" muted loop>
+    <source src="org.mp4" type="video/mp4">
+  </video>
 
-    <p id="loginError"></p>
+  <video id="bgGreen" muted loop>
+    <source src="gre.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <div class="login-card">
+
+    <!-- TEXT AREA -->
+    <h1 class="hello-text">Hello!</h1>
+
+    <h2 class="welcome-text">
+      Welcome to <span>Minzen</span>
+    </h2>
+
+    <p class="subtitle">
+      Please login to continue
+    </p>
+
+    <!-- LOGIN FORM -->
+    <div class="login-form">
+
+     <input id="username" type="text" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+
+      <button onclick="login()">Login</button>
+
+      <p id="loginError" class="error"></p>
+
+    </div>
+
+
+
+
 
   </div>
+
+</div>
+
 </div>
 <!-- LOADING SCREEN -->
 <div id="loaderScreen" class="loader-screen">
@@ -1403,9 +1510,8 @@ document.addEventListener("keydown", function(e){
 </div>
 </div>
 <script>
-/* SET YOUR LOGIN CREDENTIALS */
-const VALID_USER = "admin";
-const VALID_PASS = "1234";
+let VALID_USER = "admin";
+let VALID_PASS = "1234";
 
 function login(){
   const user = document.getElementById("username").value;
@@ -1427,10 +1533,152 @@ function login(){
     error.textContent = "Invalid Username or Password";
   }
 }
+
+const u = document.getElementById("username");
+const p = document.getElementById("password");
+
+const redV    = document.getElementById("bgRed");
+const orangeV = document.getElementById("bgOrange");
+const greenV  = document.getElementById("bgGreen");
+
+function stopAll(){
+  [redV, orangeV, greenV].forEach(v=>{
+    v.pause();
+    v.currentTime = 0;
+    v.style.display = "none";
+  });
+}
+
+function play(video){
+  stopAll();
+  video.style.display = "block";
+  video.play().catch(()=>{});
+}
+
+function checkBackground(){
+
+  const user = u.value;
+  const pass = p.value;
+
+  /* ⚪ nothing typed */
+  if(user === "" && pass === ""){
+    stopAll();
+    return;
+  }
+
+  const userFull = user === VALID_USER;
+  const passFull = pass === VALID_PASS;
+
+  /* 🟢 FULLY CORRECT */
+  if(userFull && passFull){
+    play(greenV);
+    return;
+  }
+
+  /* 🟠 PARTIAL (typing correct path) */
+  if(
+    VALID_USER.startsWith(user) ||
+    VALID_PASS.startsWith(pass)
+  ){
+    play(orangeV);
+    return;
+  }
+
+  /* 🔴 WRONG */
+  play(redV);
+}
+
+u.addEventListener("input", checkBackground);
+p.addEventListener("input", checkBackground);
+
+function stopAll(){
+  [redV, orangeV, greenV].forEach(v=>{
+    v.pause();
+    v.currentTime = 0;
+    v.style.display = "none";
+  });
+}
+
+function play(video){
+  stopAll();
+  video.style.display = "block";
+  video.play().catch(()=>{});
+}
+
+function checkBackground(){
+
+  const user = u.value;
+  const pass = p.value;
+
+  if(user === "" && pass === ""){
+    stopAll();
+    return;
+  }
+
+  const userFull = user === VALID_USER;
+  const passFull = pass === VALID_PASS;
+
+  if(userFull && passFull){
+    play(greenV);
+    return;
+  }
+
+  if(
+    VALID_USER.startsWith(user) ||
+    VALID_PASS.startsWith(pass)
+  ){
+    play(orangeV);
+    return;
+  }
+
+  play(redV);
+}
+
+u.addEventListener("input", checkBackground);
+p.addEventListener("input", checkBackground);
+
+setTimeout(()=>{
+  overlay.remove();
+  document.querySelector(".login-bg").style.zIndex = "0";
+}, 7500);
+
+
+function checkBackground(){
+
+  const user = u.value.trim();
+  const pass = p.value.trim();
+
+  /* ⚪ nothing typed */
+  if(user === "" && pass === ""){
+    stopAll();
+    return;
+  }
+
+  const userCorrect = user === VALID_USER;
+  const passCorrect = pass === VALID_PASS;
+
+  /* 🟢 BOTH CORRECT */
+  if(userCorrect && passCorrect){
+    play(greenV);
+    return;
+  }
+
+  /* 🟠 USERNAME CORRECT ONLY */
+  if(userCorrect){
+    play(orangeV);
+    return;
+  }
+
+  /* 🔴 EVERYTHING ELSE */
+  play(redV);
+}
+
+
 </script>
 
 
-  
+
+
 
 
 
