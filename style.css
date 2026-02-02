@@ -22,19 +22,17 @@ body {
   font-size: 16px;
   /* or REMOVE font-size fully */
   background-image: url(img/bg.jpg);
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 
 .banner {
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  margin-top: -200px;
 }
 
 @media (max-width: 768px){
@@ -50,20 +48,13 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-background: linear-gradient(
-    to bottom,
-    #000000,
-    #113111,
-    #000000
-  );
 
   animation: bgGlow 6s ease-in-out infinite;
-  z-index: -1;
+  z-index: 2;
   pointer-events: none;
   background-size: cover;
   background-position: center;
   animation: bgZoomIn 4s ease-in-out 1 forwards;
-  z-index: -1;
   pointer-events: none;
 }
 @keyframes bgGlow {
@@ -77,12 +68,10 @@ background: linear-gradient(
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('img/after.png');
   background-size: cover;
   background-position: top;
   transform: scale(2);
   animation: bgZoomOut 4s ease-in-out 1 forwards;
-  z-index: -1;
   pointer-events: none;
 }
 
@@ -117,11 +106,12 @@ background: linear-gradient(
 
 svg path {
   fill: transparent;
-  stroke:#717b70 ;
+  stroke:#252525 ;
   stroke-width: 0.1;
   stroke-dasharray: 50;
   stroke-dashoffset: 50;
   animation: textAnimation 4s ease-in-out 1 forwards;
+  z-index: 9999;
 }
 
 @keyframes textAnimation {
@@ -134,7 +124,7 @@ svg path {
   }
 
   100% {
-    fill: #717b70;
+    fill:#252525;
     stroke-dashoffset: 0;
   }
 }
@@ -146,7 +136,7 @@ svg path {
   border: 2px solid white;
   border-radius: 18px;
   color: white;
-  background: #717b70;
+  background: #1da171;
   box-shadow: 0 0 2px rgba(255, 255, 255, 0.25);
 
   margin: 0 auto;
@@ -262,14 +252,17 @@ svg path {
 
 .about-section {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
+   display: flex;
+  justify-content: center;
+  gap: 160px;
   margin: 0 auto;
   display: flex;
-  gap: 60px;
   align-items: center;
   padding: 80px 40px;
   color: white;
-  margin-top: -120px;
+  margin-top: -180px;
+   z-index: 5;
 }
 
 @media (max-width: 768px){
@@ -279,6 +272,10 @@ svg path {
   
 }
 
+.about-left,
+.about-right{
+  flex: 0 0 auto !important;
+}
 
 
 out-section {
@@ -289,16 +286,17 @@ out-section {
 
 .about-title {
   margin-top: 18px;
+   z-index: 5;
   /* EV card ku keela gap kammi */
 }
 
 .about-text {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .section-number {
   position: relative;
-  top: -20px;
+  top: 30px;
   /* 01 mela pogum */
 }
 
@@ -312,15 +310,15 @@ out-section {
 
 .about-right {
   max-width: 900px;
-  margin-left: auto;
 }
 
 .about-title {
-  margin-top: 40px;
+  margin-top: 50px;
   font-size: 32px;
   letter-spacing: 2px;
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   letter-spacing: -0.02em; 
+   z-index: 5;
 }
 
 .about-text {
@@ -414,6 +412,7 @@ out-section {
     padding: 60px 20px;
     gap: 30px;
     text-align: center;
+     z-index: 5;
   }
 
   .section-number {
@@ -424,6 +423,7 @@ out-section {
   .about-right {
     margin-left: 0;
     max-width: 100%;
+     z-index: 5;
   }
 
   .about-title {
@@ -433,12 +433,14 @@ out-section {
   .about-text {
     font-size: 13px;
     line-height: 1.6;
+     z-index: 5;
   }
 
   .ev-dashboard {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+     z-index: 5;
   }
 }
 
@@ -779,7 +781,7 @@ out-section {
   gap: 14px;
   align-items: center;
   padding: 18px;
-  border-radius: 14px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.04);
   transition: 0.3s ease;
 }
@@ -817,7 +819,7 @@ out-section {
   margin: 80px auto;
   background: #ffffff;
   padding: 40px;
-  border-radius: 14px;
+  border-radius: 4px;
 
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   letter-spacing: -0.02em;
@@ -1763,6 +1765,51 @@ out-section {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   letter-spacing: -0.02em; 
 }
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* VIDEO */
+.banner{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* VIDEO */
+.banner-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+/* OVERLAY */
+.banner-overlay{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.9)
+  );
+  z-index:1;
+}
+
+/* SVG */
+.svg1{
+  position:relative;
+  z-index:2;
+}
+
+
 
 .footer-col ul li:hover{
   color:#00ff99;
@@ -1894,6 +1941,7 @@ body.light-theme .footer-col li {
 body.light-theme .ev-dashboard,
 body.light-theme .ev-dashboard * {
   color: #ffffff !important;
+   z-index: 5;
 }
 
 /* numbers & labels */
@@ -1987,6 +2035,7 @@ body.light-theme .contact-form textarea::placeholder {
 body.light-theme .contact-form button {
   background: #00a063 !important;
   color: #ffffff !important;
+  border-radius: 7px;
 }
 
 /* =============================== */
@@ -2164,4 +2213,390 @@ body.light-theme .services-section .overlay-content p {
 h1, h2, h3 {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   letter-spacing: -0.02em;   /* premium tight look */
+}
+
+.invoice-cta{
+  background: linear-gradient(135deg,#f6f9f8,#ffffff);
+  padding: 80px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.invoice-cta-box{
+  max-width: 900px;
+  width:100%;
+  background:#ffffff;
+  border-radius: 18px;
+  padding: 50px;
+  text-align:center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+.invoice-cta-box h2{
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.invoice-cta-box p{
+  font-size: 15px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.cta-actions{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.btn-primary{
+  background:#0b7a65;
+  color:#fff;
+  padding:14px 34px;
+  border:none;
+  border-radius: 30px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.btn-outline{
+  background:transparent;
+  border:1px solid #0b7a65;
+  color:#0b7a65;
+  padding:14px 34px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+@media print{
+  body *{
+    visibility:hidden;
+  }
+  .invoice-wrapper, .invoice-wrapper *{
+    visibility:visible;
+  }
+  .invoice-wrapper{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+  }
+}
+
+.invoice-wrapper{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:40px;
+  font-family: Inter, sans-serif;
+}
+
+.section h3{
+  background:#0b7a65;
+  color:#fff;
+  padding:6px 16px;
+  display:inline-block;
+  border-radius:6px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:16px;
+}
+
+th{
+  background:#0b7a65;
+  color:#fff;
+  padding:10px;
+}
+
+td{
+  border-bottom:1px solid #eee;
+  padding:10px;
+}
+
+[contenteditable="true"]{
+  outline:none;
+  border-bottom:1px dashed #0b7a65;
+}
+
+/* HIDDEN BY DEFAULT */
+.invoice-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;            /* 🔥 important */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: auto;
+}
+
+/* SHOW WHEN ACTIVE */
+.invoice-modal.active{
+  display: flex;
+}
+
+.invoice-box{
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 95%;
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.close-btn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #000;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+@media print{
+
+  body *{
+    visibility: hidden;
+  }
+
+  .invoice-wrapper,
+  .invoice-wrapper *{
+    visibility: visible;
+  }
+
+  .invoice-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  .close-btn{
+    display: none;
+  }
+}
+
+/* =========================
+   INVOICE MODAL
+========================= */
+
+.invoice-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+  z-index: 9999;
+}
+
+.invoice-modal.active {
+  display: flex;
+}
+
+/* =========================
+   INVOICE CONTAINER (A4)
+========================= */
+
+.invoice-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 794px; /* A4 width */
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.invoice-close {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.invoice-close button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   EDITABLE FIELDS
+========================= */
+
+[contenteditable="true"] {
+  outline: none;
+  cursor: text;
+}
+
+.edit-mode [contenteditable="true"] {
+  background: #f4fdf9;
+  border-bottom: 1px dashed #00a063;
+}
+
+/* =========================
+   TABLE FIX
+========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+}
+
+th, td {
+  padding: 8px;
+  font-size: 14px;
+}
+
+thead {
+  background: #006d5b;
+  color: #fff;
+}
+
+tr {
+  page-break-inside: avoid;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .invoice-box {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   PRINT FIX (IMPORTANT)
+========================= */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .invoice-box, .invoice-box * {
+    visibility: visible;
+  }
+
+  .invoice-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .invoice-close {
+    display: none;
+  }
+
+  [contenteditable="true"] {
+    border: none !important;
+    background: none !important;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}
+
+/* INVOICE HEADER RIGHT ALIGN FIX */
+
+.invoice-wrapper h1 {
+  float: left;
+  font-size: 26px;
+  margin: 0;
+}
+
+/* Invoice No / Date / Service Date */
+.invoice-wrapper h1 + p,
+.invoice-wrapper h1 + p + p,
+.invoice-wrapper h1 + p + p + p {
+  float: right;
+  clear: right;
+  text-align: right;
+  font-size: 13px;
+  margin: 2px 0;
+  color: #333;
+}
+
+/* Print safe */
+@media print {
+  .invoice-wrapper h1 + p,
+  .invoice-wrapper h1 + p + p,
+  .invoice-wrapper h1 + p + p + p {
+    font-size: 12px;
+  }
+}
+/* SIGNATURE SECTION FIX */
+.signatures{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;   /* 👈 keela pogum */
+  padding-top: 30px;
+}
+
+.signatures div{
+  width: 45%;
+  text-align: center;
+  line-height: 2.2;   /* 👈 spacing */
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 14px;
+}
+/* FORCE INVOICE DETAILS LEFT */
+.invoice-wrapper p{
+  float: none !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+.payment-summary tr td{
+  padding: 10px 6px;
+}
+
+.payment-summary tr:last-child{
+  font-weight: bold;
+  border-top: 2px solid #006d5b;
+}
+
+.service-desc{
+  cursor: text;
+}
+
+.service-desc:focus{
+  background: #f4fdf9;
 }
