@@ -2600,3 +2600,128 @@ tr {
 .service-desc:focus{
   background: #f4fdf9;
 }
+
+/* =========================
+   LOGIN SCREEN – LIGHT THEME
+========================= */
+
+.login-screen{
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg,#f5f7f6,#ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-box{
+  background: #ffffff;
+  padding: 50px 45px;
+  border-radius: 18px;
+  width: 380px;               /* 👈 perusa */
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.login-box h2{
+  color: #0b7a65;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* INPUT FIELDS */
+.login-box input{
+  width: 100%;
+  padding: 16px 18px;         /* 👈 height increase */
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.login-box input:focus{
+  border-color: #0b7a65;
+  box-shadow: 0 0 0 3px rgba(11,122,101,0.15);
+}
+
+/* BUTTON */
+.login-box button{
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg,#0b7a65,#00a063);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-box button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,160,99,0.35);
+}
+
+/* ERROR MESSAGE */
+#loginError{
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+/* LOADER SCREEN */
+.loader-screen{
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: none;              /* 🔥 default hidden */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+  color: #0b7a65;
+  font-family: "Poppins", sans-serif;
+}
+
+/* SVG LOADER */
+.loader-svg{
+  width: 90px;
+  height: 90px;
+}
+
+.loader-svg circle{
+  fill: none;
+  stroke: #0b7a65;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 251;
+  animation: loaderSpin 1.2s linear infinite;
+}
+
+@keyframes loaderSpin{
+  0%{
+    stroke-dashoffset: 251;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    transform: rotate(360deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+.loader-screen p{
+  margin-top: 18px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
